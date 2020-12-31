@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: second-deployment-service
+spec:
+  selector: 
+    my-selector-key1: my-selector-value1
+  ports:
+    - protocol: 'TCP'
+      port: 80
+      targetPort: 8080
+    # - protocol: 'TCP'
+    #   port: 443
+    #   targetPort: 443
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      my-selector-key1: my-selector-value1
+      my-selector-key2: my-selector-value2
+  template:
+    metadata: 
+      labels:
+        my-selector-key1: my-selector-value1
+        my-selector-key2: my-selector-value2
+    spec: 
+      containers:
+        - name: second-deployment-pod
+          image: aybjax/kub-first-app:3
+        # - name: ...
+        #   image: ...

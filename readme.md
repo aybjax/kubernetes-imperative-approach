@@ -26,7 +26,7 @@ kubectl delete -f=deployment.yaml,service.yml
 
 
 
-**IF WANT TO USE SINGLE FILE**
+**_IF WANT TO USE SINGLE FILE_**
 
 `
 kubectl apply -f=master-onefile.yml

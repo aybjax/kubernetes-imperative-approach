@@ -17,3 +17,8 @@ kubectl expose deployment first-deployment --port=8080 --type=LoadBalancer
 kubectl get services
 minikube service first-deployment
 `
+
+# manually scale to 3 pods
+`
+kubectl scale deployment/first-deployment --replicas=3
+`

@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     <h1>Hello from this NodeJS app!</h1>
     <p>Try sending a request to /error and see what happens</p>
     <p>
-      This is updated version by aybjax
+      This minicube pods created with declarative approach
     </p>
   `);
 });

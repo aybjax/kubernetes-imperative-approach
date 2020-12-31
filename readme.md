@@ -21,4 +21,5 @@ minikube service first-deployment
 ### manually scale to 3 pods
 ```
 kubectl scale deployment/first-deployment --replicas=3
+kubectl rollout status deployment/first-deployment
 ```

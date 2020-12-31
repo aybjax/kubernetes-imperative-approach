@@ -15,5 +15,5 @@ kubectl create deployment first-deployment --image=aybjax/kub-first-app
 `
 kubectl expose deployment first-deployment --port=8080 --type=LoadBalancer
 kubectl get services
-
+minikube service first-deployment
 `

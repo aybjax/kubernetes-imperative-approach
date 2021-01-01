@@ -17,5 +17,6 @@ spec:
       containers:
         - name: second-deployment-pod
           image: aybjax/kub-first-app:3
+        # add list
         # - name: ...
         #   image: ...
